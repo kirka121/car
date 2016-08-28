@@ -1,4 +1,12 @@
-this is landing
-
-<%= button_to 'turn on', toggle_lamp_path(lamp: { toggle: 'on'})%>
-<%= button_to 'turn OFF', toggle_lamp_path(lamp: { toggle: 'off'})%>
+<div class='wrapper'>
+  <%= button_to toggle_lamp_path(lamp: { toggle: 'on'}), class: 'button_wrapper' do %>
+    <div class='button_on'>
+      ON
+  <% end%>
+  <br/>
+  <%= button_to toggle_lamp_path(lamp: { toggle: 'off'}), class: 'button_wrapper' do %>
+    <div class='button_off'>
+      OFF
+    </div>
+  <% end%>
+</div>

@@ -1,6 +1,6 @@
 class LandingController < ApplicationController
   include PiPiper
-  @@lamp = PiPiper::Pin.new(pin: 17, direction: :out)
+  #@@lamp = PiPiper::Pin.new(pin: 17, direction: :out)
 
   def index
 
