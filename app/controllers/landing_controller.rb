@@ -1,22 +1,19 @@
 class LandingController < ApplicationController
   include PiPiper
+  @@lamp = PiPiper::Pin.new(pin: 17, direction: :out)
 
   def index
 
   end
 
   def toggle_lamp
-    byebug
-
-    lamp = PiPiper::Pin.new(pin: 17, direction: :out)
-
-    if lamp_params == :on
-      lamp.on
+    if lamp_params[:toggle] == 'on'
+      @@lamp.on
     else
-      lamp.off
+      @@lamp.off
     end
 
-    redirect_to :index
+    redirect_to root_path
   end
 
   private
