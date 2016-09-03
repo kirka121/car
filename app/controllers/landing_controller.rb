@@ -1,7 +1,7 @@
 class LandingController < ApplicationController
   include PiPiper
   @@pin17 = PiPiper::Pin.new(pin: 17, direction: :out)
-  @@pin18 = PiPiper::Pin.new(pin: 18, direction: :out)
+  @@pin27 = PiPiper::Pin.new(pin: 27, direction: :out)
 
   def index
 
@@ -19,9 +19,9 @@ class LandingController < ApplicationController
 
   def toggle_rgb
     if lamp_params[:toggle] == 'on'
-      @@pin18.on
+      @@pin27.on
     else
-      @@pin18.off
+      @@pin27.off
     end
 
     redirect_to root_path
