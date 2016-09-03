@@ -21,7 +21,7 @@ class LandingController < ApplicationController
     if lamp_params[:toggle] == 'on'
       @@pin27.on
     else
-      @@pin27.off
+      @@pin18.off
     end
 
     redirect_to root_path
