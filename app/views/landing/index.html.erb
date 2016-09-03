@@ -1,29 +1,26 @@
-<h1>BLUE:</h1>
-<br/>
+
 <div class='wrapper'>
   <%= button_to toggle_lamp_path(lamp: { toggle: 'on'}), class: 'button_wrapper' do %>
     <div class='button_on'>
-      ON
+      Blue ON
   <% end%>
   <br/>
   <%= button_to toggle_lamp_path(lamp: { toggle: 'off'}), class: 'button_wrapper' do %>
     <div class='button_off'>
-      OFF
+      Blue OFF
     </div>
   <% end%>
 </div>
 
-<h1>RGB:</h1>
-<br/>
 <div class='wrapper'>
   <%= button_to toggle_rgb_path(lamp: { toggle: 'on'}), class: 'button_wrapper' do %>
-    <div class='button_on'>
-      ON
+    <div class='button_on rgb'>
+      RGB ON
   <% end%>
   <br/>
   <%= button_to toggle_rgb_path(lamp: { toggle: 'off'}), class: 'button_wrapper' do %>
-    <div class='button_off'>
-      OFF
+    <div class='button_off rgb'>
+      RGB OFF
     </div>
   <% end%>
 </div>

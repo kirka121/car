@@ -32,8 +32,14 @@ h1{
 .button_on{
   background-color: #3fa568;
   padding: 10px;
+  &.rgb{
+    background-color: #3f75a5;
+  }
 }
 .button_off{
   background-color: #b73b3f;
   padding: 10px;
+  &.rgb{
+    background-color: #963fa5;
+  }
 }
